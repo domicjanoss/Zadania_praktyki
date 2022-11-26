@@ -9,31 +9,31 @@
         const arr1 = ["Anna", "Maria"];
         const arr2 = ["Adam", "Marek", "Bartek", "Tomek"];
         const numbers = [1,2,3,4,5];
+        
+        
 
         console.log("Concat");
-        const variable1  = arr2.concat(arr1);
-        console.log(variable1);
+        const vConcat = (a1, a2) => [...a1, ...a2];
+        console.log(vConcat(arr1, arr2));
 
         console.log("Reverse");
-        const variable2 = numbers.reverse();
-        console.log(variable2[0]);
-        console.log(variable2[4]);
+        const vReverse = (a1) =>[...a1].reverse()[0];
+        console.log(vReverse(arr2));
 
         console.log("Filter");
-        const variable3 = numbers.filter(numbers => numbers >=3);
-        console.log(variable3);
+        const vFilter = (a1, arg) => a1.filter(result => result === arg);
+        console.log(vFilter(arr2, "Adam"));
 
          console.log("Reudce");
          const initialValue = 0;
-         const variable4 = numbers.reduce((previousValue, currentValue) => previousValue + currentValue,initialValue);
-         console.log(variable4);
+        const sumWithInitial = numbers.reduce((previousValue, currentValue) => previousValue + currentValue,initialValue);
+        console.log(sumWithInitial);
 
          console.log("Map");
-         const variable5 = numbers.map(number => number*number + 3);
-         console.log(variable5);
+         const vMap = numbers.map(number => number*number + 3);
+         console.log(vMap);
+    
     </script>
-</head>
-<body>
 
 </body>
 </html>
